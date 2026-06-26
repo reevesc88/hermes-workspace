@@ -10,7 +10,7 @@ Full-stack web workspace application for interacting with local Hermes AI agents
 
 ## Key Rules
 - API keys and secrets in `.env` only — never committed
-- Services bind to `0.0.0.0` for Tailnet access (IP: 100.108.75.69)
+- Services bind to `0.0.0.0` for Tailnet access — never `127.0.0.1`
 - Do not use `127.0.0.1` if Tailnet access is needed
 - Keep features behind feature flags where possible
 
