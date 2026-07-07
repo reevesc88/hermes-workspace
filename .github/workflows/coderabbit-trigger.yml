@@ -8,12 +8,11 @@ concurrency:
   group: request-coderabbit-${{ github.event.pull_request.number }}
   cancel-in-progress: true
 
-permissions:
-  pull-requests: write
-
 jobs:
   request-review:
     runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write # needed to request reviewers via pulls.requestReviewers
     if: github.event.pull_request.head.repo.full_name == github.repository
     steps:
       - name: Request CodeRabbit and Gemini reviews
@@ -31,7 +30,7 @@ jobs:
               });
               core.info('Review requested from coderabbitai and gemini-code-assist[bot]');
             } catch (e) {
-              const status = e.response?.status;
+              const status = e.status ?? e.response?.status;
               const msg = e.response?.data?.message ?? e.message;
               if (status === 422) {
                 core.warning(`Reviewer request returned 422 (benign): ${msg}`);

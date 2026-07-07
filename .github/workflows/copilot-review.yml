@@ -8,12 +8,11 @@ concurrency:
   group: request-copilot-${{ github.event.pull_request.number }}
   cancel-in-progress: true
 
-permissions:
-  pull-requests: write
-
 jobs:
   request-copilot:
     runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write # needed to call requestReviewers
     if: github.event.pull_request.draft == false && github.event.pull_request.head.repo.full_name == github.repository
     steps:
       - name: Request Copilot review
@@ -31,7 +30,7 @@ jobs:
               });
               core.info('Copilot review requested');
             } catch (e) {
-              const status = e.response?.status;
+              const status = e.status ?? e.response?.status;
               const msg = e.response?.data?.message ?? e.message;
               if (status === 422) {
                 core.warning(`Reviewer request returned 422 (benign): ${msg}`);
