@@ -1,21 +1,27 @@
-# CodeRabbit configuration
-# Docs: https://docs.coderabbit.ai/guides/configure-coderabbit
-language: "en-AU"
+language: "en-US"
+tone_instructions: "Be concise and direct. Flag security issues: API keys, hardcoded credentials, missing .gitignore. Flag data loss. D1 migrations must be additive — no DROP or destructive ALTER. Skip style nitpicks."
 reviews:
   profile: "assertive"
-  request_changes_workflow: false
-  high_level_summary: true
-  poem: false
-  review_status: true
-  collapse_walkthrough: false
   auto_review:
     enabled: true
-    drafts: false
+    drafts: true
     base_branches:
       - main
       - master
   path_filters:
+    - "!**/pnpm-lock.yaml"
+    - "!**/package-lock.json"
+    - "!**/yarn.lock"
     - "!**/*.lock"
+    - "!**/venv/**"
     - "!**/node_modules/**"
+    - "!**/frameworks/**"
     - "!**/dist/**"
     - "!**/build/**"
+  review_status: true
+  poem: false
+  collapse_walkthrough: false
+chat:
+  auto_reply: true
+knowledge_base:
+  opt_out: true
