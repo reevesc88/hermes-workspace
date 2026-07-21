@@ -54,7 +54,7 @@ Defined in `swarm.yaml` — source of truth for routing. Each worker has:
 
 | Worker | Wrapper | Primary Role |
 |--------|---------|-------------|
-| `orchestrator` | `orchestrator:plan` | Routes tasks, enforces greenlight |
+| `orchestrator` | `orchestrator:plan` | Routes tasks; greenlight declared in swarm.yaml, not yet wired as a code gate |
 | `km-agent` | `km:health` | Knowledge management, GBrain, Obsidian |
 | `builder` | `builder:task` | Implements; uses TDD, GitHub PR workflow |
 | `reviewer` | `reviewer:gate` | Gates PRs; code review |
