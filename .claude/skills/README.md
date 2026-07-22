@@ -1,9 +1,10 @@
 # Vendored Claude Code Agent Skills
 
-These skills are **verbatim copies** of the animation and design skills from
-`reevesc88/claude-config` (`claude-config/skills/`) as of 2026-07-21. The
-`claude-config` repo is the source of truth; update these copies by re-vendoring
-from there, not by editing them in place.
+These skills are **verbatim copies** of skills from `reevesc88/claude-config`.
+The animation and design skills were vendored as of 2026-07-21; the
+`project-blueprint` skill was vendored 2026-07-22 (pinned claude-config sha
+`782dc01`). The `claude-config` repo is the source of truth; update these copies
+by re-vendoring from there, not by editing them in place.
 
 ## Why they live here
 
@@ -13,7 +14,7 @@ mounts agent skills from `.claude/skills/`, so vendored skills for cloud/phone
 Claude Code sessions go here in `.claude/skills/`, kept separate from the
 top-level `skills/` workspace roster.
 
-## Skills vendored (10)
+## Skills vendored (11)
 
 | Skill | Purpose |
 |-------|---------|
@@ -27,6 +28,22 @@ top-level `skills/` workspace roster.
 | `gsap-frameworks` | GSAP with Vue, Svelte, and other non-React frameworks |
 | `design-dna` | Reverse-engineer a reference design into a Design DNA JSON (includes `references/`) |
 | `motion-design` | Universal motion-design principles (includes `director/`, `patterns/`, `reference/`) |
+| `project-blueprint` | Scaffold a tiered project blueprint doc set; bundles `templates/blueprint/` (13 templates) under the skill dir |
+
+## project-blueprint provenance
+
+Unlike the animation and design skills above, `project-blueprint` is a
+claude-config-native skill (no external upstream). It is vendored verbatim from
+`reevesc88/claude-config`:
+
+- **Source of truth:** `reevesc88/claude-config`
+- **Pinned claude-config sha:** `782dc01` (2026-07-22)
+- **Skill file:** `claude-config/skills/project-blueprint/SKILL.md`
+- **Templates:** `claude-config/templates/blueprint/*.md` (13 `.md` files incl `INDEX.md`)
+
+`SKILL.md` references `templates/blueprint/` by relative path, so the templates
+are bundled under `project-blueprint/templates/blueprint/` to keep the skill
+self-contained with zero edits.
 
 ## Pinned upstream SHAs
 
