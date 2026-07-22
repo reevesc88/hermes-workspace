@@ -20,15 +20,17 @@ before shipping.
 
 ## PII inventory
 
-<!-- Every item of personal information the product touches. "Lawful basis" under the APPs is
-usually consent or that it is reasonably necessary for a function/activity (APP 3). "Location"
-matters because cross-border disclosure triggers APP 8. -->
+<!-- Every item of personal information the product touches. "Collection basis" is APP 3 (lawful
+and fair collection; collection must be reasonably necessary for a function/activity; consent is
+required only for sensitive information). "Hosting location" is where the data is stored - keeping
+it offshore may still be a "use" rather than a "disclosure" if the entity keeps control. "Overseas
+disclosure" is the separate APP 8 concern: disclosing PII to an overseas recipient. -->
 
-| Data item | Purpose | Lawful basis | Retention | Location |
-|-----------|---------|--------------|-----------|----------|
-| <!-- email --> | <!-- account identity --> | <!-- necessary for service --> | <!-- until deletion --> | <!-- AU / offshore region --> |
-| <!-- name --> | <!-- --> | <!-- --> | <!-- --> | <!-- --> |
-| <!-- uploaded content --> | <!-- --> | <!-- --> | <!-- --> | <!-- --> |
+| Data item | Purpose | Collection basis (APP 3: reasonably necessary; consent only for sensitive info) | Retention | Hosting location | Overseas disclosure (APP 8) |
+|-----------|---------|--------------|-----------|----------|-----------------------------|
+| <!-- email --> | <!-- account identity --> | <!-- necessary for service --> | <!-- until deletion --> | <!-- AU / offshore region --> | <!-- none / recipient + country --> |
+| <!-- name --> | <!-- --> | <!-- --> | <!-- --> | <!-- --> | <!-- --> |
+| <!-- uploaded content --> | <!-- --> | <!-- --> | <!-- --> | <!-- --> | <!-- --> |
 
 ## Consent and notice (APP 1, APP 5)
 

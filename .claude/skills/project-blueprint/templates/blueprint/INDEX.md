@@ -21,7 +21,8 @@ already does (Gospel Rule 9, skills-first).
   the quality bar, and the security/privacy floor. Every project owes Tier 1.
 - **Tier 2 - Technical depth.** The stack rationale, the API contract, the test and
   observability plans, the scored risks. Owed by anything real - shared, paid, or
-  production-bound.
+  production-bound (see SKILL.md Step 1 for the exact Complexity-Scale -> Tier mapping; a
+  Moderate project stays Tier 1 unless it will persist).
 - **Tier 3 - At scale.** Deepened versions of the Tier 1/2 docs, owed only under team / revenue /
   compliance pressure: a full STRIDE threat model, a formal cost model, an incident-response
   runbook, and a formal ADR / risk-review cadence. Mostly deeper use of the same skills, not new

@@ -14,6 +14,8 @@ the endpoint table. Delete guidance comments before shipping.
 | Base URL | <!-- e.g. /api/v1 --> |
 | Auth scheme | <!-- e.g. session cookie / bearer token --> |
 
+<!-- If session-cookie auth is selected, document a CSRF mitigation for state-changing POST/DELETE (a CSRF token/header, or an explicit SameSite cookie strategy). -->
+
 ## Endpoints
 
 <!-- One row per endpoint. Auth: what identity/permission is required. Request/Response: the
@@ -46,6 +48,10 @@ schema name or a one-line shape. Errors: the status codes this endpoint can retu
 ## OpenAPI stub
 
 <!-- Minimal OpenAPI 3.1. Grow this into the real spec; keep it aligned with the table above. -->
+
+<!-- This block is an illustrative excerpt, not an exhaustive spec: it only defines `/items`. The
+full contract should cover every endpoint and error response listed in the endpoint table above,
+including the per-id routes (`GET`/`DELETE /items/:id`) and the 401 on `POST /items`. -->
 
 ```yaml
 openapi: 3.1.0

@@ -6,12 +6,12 @@ author: Claude
 platforms: [cloud, local]
 metadata:
   tags: [planning, blueprint, prd, architecture, requirements, scaffolding, fundamentals]
-  source: https://github.com/reevesc88/claude-config/tree/master/skills/project-blueprint
+  source: https://github.com/reevesc88/claude-config/tree/782dc01717211d3c9e8d1a120a30676dd80d137c/skills/project-blueprint
 ---
 
 # project-blueprint
 
-You scaffold a tiered "project blueprint" document set for a software project (new or existing). You reuse Calum's existing skills for what they already cover, and generate only the missing gap docs from skeletons in `templates/blueprint/` (this repo). The output is a canonical, tiered doc set plus a `BLUEPRINT.md` index that says exactly which docs the project owes, their status, and where each one is sourced.
+You scaffold a tiered "project blueprint" document set for a software project (new or existing). You reuse Calum's existing skills for what they already cover, and generate only the missing gap docs from skeletons in `templates/blueprint/`. Resolve that path relative to where this skill is installed, never the consuming repository root: in the `claude-config` source repo (and in `~/.claude`) the skeletons live at the config-root `templates/blueprint/`, a sibling of `skills/`; when this skill is vendored into another repo they are bundled alongside this `SKILL.md` under the skill's own directory (`.../project-blueprint/templates/blueprint/`). The output is a canonical, tiered doc set plus a `BLUEPRINT.md` index that says exactly which docs the project owes, their status, and where each one is sourced.
 
 ## Why this exists
 
@@ -53,6 +53,8 @@ Use this repo's existing Complexity Scale (in `claude-config/CLAUDE.md`) and map
 For an EXISTING project, infer the tier from what is actually there (number of domains, persistence, cross-system coupling), not from ambition. When genuinely ambiguous between two tiers, ask one clarifying question, then proceed. A weekend project should not be pushed past Tier 1.
 
 ### Step 2 — Produce or verify the canonical tiered doc set
+
+All `templates/blueprint/` paths below resolve to that same skeletons directory - the config-root `templates/blueprint/` in `claude-config`/`~/.claude`, or the `templates/blueprint/` bundled beside this SKILL.md when the skill is vendored - never the consuming repository root.
 
 For each doc the project owes at its tier:
 

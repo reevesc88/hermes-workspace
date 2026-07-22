@@ -3,7 +3,7 @@
 These skills are **verbatim copies** of skills from `reevesc88/claude-config`.
 The animation and design skills were vendored as of 2026-07-21; the
 `project-blueprint` skill was vendored 2026-07-22 (pinned claude-config sha
-`782dc01`). The `claude-config` repo is the source of truth; update these copies
+`c3b3455`). The `claude-config` repo is the source of truth; update these copies
 by re-vendoring from there, not by editing them in place.
 
 ## Why they live here
@@ -37,7 +37,7 @@ claude-config-native skill (no external upstream). It is vendored verbatim from
 `reevesc88/claude-config`:
 
 - **Source of truth:** `reevesc88/claude-config`
-- **Pinned claude-config sha:** `782dc01` (2026-07-22)
+- **Pinned claude-config sha:** `c3b3455` (2026-07-22)
 - **Skill file:** `claude-config/skills/project-blueprint/SKILL.md`
 - **Templates:** `claude-config/templates/blueprint/*.md` (13 `.md` files incl `INDEX.md`)
 

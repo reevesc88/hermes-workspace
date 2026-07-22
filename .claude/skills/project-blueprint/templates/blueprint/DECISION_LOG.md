@@ -17,7 +17,7 @@ Format:
   Status (Proposed / Accepted / Superseded).
 - Append-only. Never edit a decided block to reverse it: add a later DEC that supersedes it,
   or an `### Addendum (YYYY-MM-DD)` under the original for clarifications and follow-ups.
-- Mark a reversed decision `Status: Superseded by DEC-NNN`.
+- Mark a reversed decision `Status: Superseded` and name the superseding decision (DEC-NNN) in the block (an Addendum line or a `Superseded by:` field).
 
 Delete this comment block before shipping; keep the DEC-001 example or replace it with a real one.
 -->
@@ -32,4 +32,4 @@ Reason: <!-- Why this over the alternatives. Name the alternatives considered. -
 
 Related ADR: <!-- ADR-NNNN if this decision has a detailed ADR in TECH-DECISIONS.md, else - -->
 
-Status: Accepted
+Status: Proposed

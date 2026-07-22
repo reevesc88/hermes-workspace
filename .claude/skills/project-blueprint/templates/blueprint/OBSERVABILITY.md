@@ -61,5 +61,5 @@ there is no process to attach to, so logs and analytics are the primary window. 
 
 - **Workers Analytics Engine** for custom metrics (write data points from the Worker, query via SQL API).
 - **Logpush** to ship request/Worker logs to R2 or an external sink for retention and search (`wrangler tail` is live-only, not a store).
-- **Workers Trace Events / `tail` Workers** to capture structured events per request.
+- **Trace Events** are the per-request telemetry data source. Consume them two distinct ways: `wrangler tail` for live-only CLI debugging (no retention), and **Tail Workers** as programmable consumers that receive each Trace Event and forward structured data to a sink.
 - Watch the free-tier limits (CPU ms, subrequests) as an operational signal, not just a billing one.

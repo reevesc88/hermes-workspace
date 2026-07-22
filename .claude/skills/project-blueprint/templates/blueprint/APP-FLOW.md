@@ -36,6 +36,8 @@ is a design gap, not a formatting gap. "Empty" = no data yet. "Loading" = fetch 
 
 | Screen | Purpose | Entry | Exit | Empty state | Loading state | Error state |
 |--------|---------|-------|------|-------------|---------------|-------------|
+| Landing | <!-- --> | <!-- entry point --> | <!-- to Login --> | N/A | N/A | N/A |
+| Login | <!-- --> | <!-- from Landing --> | <!-- to Dashboard --> | N/A | <!-- sign-in pending --> | <!-- bad credentials + retry --> |
 | Dashboard | <!-- --> | <!-- from where --> | <!-- to where --> | <!-- no items yet copy/CTA --> | <!-- skeleton? spinner? --> | <!-- fetch failed copy + retry --> |
 | Item Detail | <!-- --> | <!-- --> | <!-- --> | <!-- N/A or --> | <!-- --> | <!-- --> |
 | Create Item | <!-- --> | <!-- --> | <!-- --> | <!-- --> | <!-- submit pending --> | <!-- validation + server error --> |
