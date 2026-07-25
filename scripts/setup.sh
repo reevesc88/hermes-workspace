@@ -92,6 +92,7 @@ if [[ -f "$REPO_ROOT/.env" ]]; then
   log "  $REPO_ROOT/.env already exists — leaving it as-is"
 else
   cp "$REPO_ROOT/.env.example" "$REPO_ROOT/.env"
+  chmod 600 "$REPO_ROOT/.env"
   log "  Created $REPO_ROOT/.env from .env.example (placeholders only)"
 fi
 
@@ -110,6 +111,7 @@ if [[ -f "$HERMES_ENV_PATH" ]]; then
 else
   mkdir -p "$(dirname "$HERMES_ENV_PATH")"
   cp "$REPO_ROOT/.env.hermes-agent.example" "$HERMES_ENV_PATH"
+  chmod 600 "$HERMES_ENV_PATH"
   log "  Created $HERMES_ENV_PATH from .env.hermes-agent.example (placeholders only)"
 fi
 
