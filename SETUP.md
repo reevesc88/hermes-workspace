@@ -46,7 +46,6 @@ If a `packageManager` field is added later, run `corepack prepare` with no argum
 From the repo root:
 
 ```bash
-cd hermes-workspace
 pnpm install
 ```
 
@@ -63,11 +62,13 @@ Three files are involved. `scripts/setup.sh` creates the first two from template
 ```bash
 # Workspace env
 cp .env.example .env
+chmod 600 .env
 
 # Gateway/CLI env (macOS/Linux; resolves the real path via the hermes CLI if installed)
 HERMES_ENV_PATH="$(hermes config env-path 2>/dev/null || echo "$HOME/.hermes/.env")"
 mkdir -p "$(dirname "$HERMES_ENV_PATH")"
 cp .env.hermes-agent.example "$HERMES_ENV_PATH"
+chmod 600 "$HERMES_ENV_PATH"
 ```
 
 Then open both files and fill in real values yourself. Never commit either — both are already gitignored (`.env`, and `~/.hermes/.env` is outside the repo entirely).
