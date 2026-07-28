@@ -2,8 +2,11 @@ language: "en-US"
 tone_instructions: "Be concise and direct."
 reviews:
   profile: "assertive"
+  # CodeRabbit runs on demand only, not on every PR, to conserve review quota.
+  # To request a review: add the `ai-review` label to the PR,
+  # or comment `@coderabbitai review`.
   auto_review:
-    enabled: true
+    enabled: false
     drafts: true
     base_branches:
       - main
